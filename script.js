@@ -29,31 +29,21 @@ document.addEventListener('DOMContentLoaded', () => {
     setLanguage(savedLang);
 
 
-    // --- Active Nav Link on Scroll ---
-    const sections = document.querySelectorAll('main section');
+    // --- Highlight Current Page in Nav ---
     const navLinks = document.querySelectorAll('.nav-links a');
 
-    const activateNavLink = () => {
-        let currentSectionId = '';
-        const scrollPosition = window.scrollY;
-
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 70; // Offset for fixed header
-            if (scrollPosition >= sectionTop) {
-                currentSectionId = section.getAttribute('id');
-            }
-        });
-        
+    const highlightCurrentPage = () => {
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
         navLinks.forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href') === `#${currentSectionId}`) {
+            const linkPage = link.getAttribute('href');
+            if (linkPage === currentPage) {
                 link.classList.add('active');
             }
         });
     };
 
-    window.addEventListener('scroll', activateNavLink);
-    activateNavLink(); // Set active link on page load
+    highlightCurrentPage();
 
     // --- PDF Export --- 
     const exportButton = document.getElementById('export-pdf');
