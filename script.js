@@ -59,15 +59,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const exportButton = document.getElementById('export-pdf');
     exportButton.addEventListener('click', () => {
         const { jsPDF } = window.jspdf;
-        const doc = new jsPDF();
-
+        const doc = new jsPDF('p', 'pt', 'a4');
         const mainContent = document.querySelector('.main-content');
-        html2canvas(mainContent).then(canvas => {
+
+        html2canvas(mainContent, {
+            useCORS: true,
+            scale: 2, // Aumenta la resolución de la imagen
+        }).then(canvas => {
             const imgData = canvas.toDataURL('image/png');
-            const imgProps= doc.getImageProperties(imgData);
+            const imgProps = doc.getImageProperties(imgData);
             const pdfWidth = doc.internal.pageSize.getWidth();
             const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-            doc.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+            let heightLeft = pdfHeight;
+            let position = 0;
+
+            doc.addImage(imgData, 'PNG', 0, position, pdfWidth, pdfHeight);
+            heightLeft -= doc.internal.pageSize.getHeight();
+
+            while (heightLeft >= 0) {
+                position = heightLeft - pdfHeight;
+                doc.addPage();
+                doc.addImage(imgData, 'PNG', 0, position, pdfWidth, pdfHeight);
+                heightLeft -= doc.internal.pageSize.getHeight();
+            }
+
             doc.save('juliocesar_madera_quintana.pdf');
         });
     });
