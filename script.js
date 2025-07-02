@@ -68,19 +68,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }).then(canvas => {
             const imgData = canvas.toDataURL('image/png');
             const imgProps = doc.getImageProperties(imgData);
+            const imgWidth = imgProps.width;
+            const imgHeight = imgProps.height;
+
             const pdfWidth = doc.internal.pageSize.getWidth();
-            const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-            let heightLeft = pdfHeight;
-            let position = 0;
+            const pdfHeight = (imgHeight * pdfWidth) / imgWidth; // Total height of the content scaled to PDF width
 
-            doc.addImage(imgData, 'PNG', 0, position, pdfWidth, pdfHeight);
-            heightLeft -= doc.internal.pageSize.getHeight();
+            const marginTop = 40; // points
+            const marginBottom = 40; // points
+            const pageHeight = doc.internal.pageSize.getHeight();
+            const usablePageHeight = pageHeight - marginTop - marginBottom;
 
-            while (heightLeft >= 0) {
-                position = heightLeft - pdfHeight;
-                doc.addPage();
-                doc.addImage(imgData, 'PNG', 0, position, pdfWidth, pdfHeight);
-                heightLeft -= doc.internal.pageSize.getHeight();
+            let pages = Math.ceil(pdfHeight / usablePageHeight); // Number of pages needed
+
+            for (let i = 0; i < pages; i++) {
+                if (i > 0) {
+                    doc.addPage();
+                }
+                const yOffset = -i * usablePageHeight; // How much to shift the image up
+                doc.addImage(imgData, 'PNG', 0, yOffset + marginTop, pdfWidth, pdfHeight);
             }
 
             doc.save('juliocesar_madera_quintana.pdf');
