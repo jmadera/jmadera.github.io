@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. C. Julio César Madera Quintana</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="main-nav">
+            <div class="nav-links">
+                <a href="index.html"><span class="es">Sobre mí</span><span class="en">About</span></a>
+                <a href="experience.html"><span class="es">Experiencia</span><span class="en">Experience</span></a>
+                <a href="education.html"><span class="es">Educación</span><span class="en">Education</span></a>
+                <a href="publications.html"><span class="es">Publicaciones</span><span class="en">Publications</span></a>
+                <a href="awards.html"><span class="es">Premios</span><span class="en">Awards</span></a>
+                <a href="responsibilities.html"><span class="es">Responsabilidades</span><span class="en">Responsibilities</span></a>
+                <a href="postgraduate-courses.html"><span class="es">Cursos de Postgrado</span><span class="en">Postgraduate Courses</span></a>
+            </div>
+            <div class="lang-switcher">
+                <button id="lang-es" class="active">ES</button>
+                <button id="lang-en">EN</button>
+                <button id="export-pdf"><i class="fa-solid fa-file-pdf"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="profile">
+                <img src="images/profile.jpg" alt="Foto de Julio César Madera Quintana" class="profile-img">
+                <h1>Dr. C. Julio César Madera Quintana</h1>
+                <p class="title"><span class="es">Profesor Titular, Universidad de Camagüey</span><span class="en">Full Professor, University of Camagüey</span></p>
+            </div>
+            <div class="contact-info">
+                <h4><span class="es">Contacto</span><span class="en">Contact</span></h4>
+                <p><strong>Email:</strong><br> <a href="mailto:julio.madera@reduc.edu.cu">julio.madera@reduc.edu.cu</a></p>
+                <p><strong><span class="es">Teléfono</span><span class="en">Phone</span>:</strong><br> +53 52753008</p>
+                <p><strong><span class="es">Dirección</span><span class="en">Address</span>:</strong><br> <span class="es">Universidad de Camagüey, Camagüey, Cuba</span><span class="en">University of Camagüey, Camagüey, Cuba</span></p>
+            </div>
+            <div class="personal-info">
+                 <h4><span class="es">Información Personal</span><span class="en">Personal Information</span></h4>
+                 <p><strong><span class="es">Nacionalidad</span><span class="en">Nationality</span>:</strong> Cubano</p>
+                 <p><strong><span class="es">Fecha de Nacimiento</span><span class="en">Date of Birth</span>:</strong> 13 de Mayo de 1974</p>
+            </div>
+            <div class="languages">
+                <h4><span class="es">Idiomas</span><span class="en">Languages</span></h4>
+                <p><strong><span class="es">Español</span><span class="en">Spanish</span>:</strong> <span class="es">Nativo</span><span class="en">Native</span></p>
+                <p><strong><span class="es">Inglés</span><span class="en">English</span>:</strong> <span class="es">Profesional</span><span class="en">Professional</span></p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+
+
+            
+
+
+
+            <section id="postgraduate-courses">
+                <h2><span class="es">Cursos de Postgrado Impartidos</span><span class="en">Postgraduate Courses Taught</span></h2>
+                <ul>
+                    <li><span class="es">Programación Avanzada, Maestría en Informática Aplicada. Universidad de Camagüey, Cuba. (2025).</span><span class="en">Advanced Programming, Master in Applied Informatics. University of Camagüey, Cuba. (2025).</span></li>
+                    <li><span class="es">Métodos Matemáticos y Computacionales, Maestría de Eficiencia Energética. Universidad de Camagüey, Cuba. (2024)</span><span class="en">Mathematical and Computational Methods, Master of Energy Efficiency. University of Camagüey, Cuba. (2024)</span></li>
+                    <li><span class="es">Algoritmización. Maestría en Ingeniería Mecánica. Universidad de Camagüey, Cuba. (2024)</span><span class="en">Algorithmization. Master in Mechanical Engineering. University of Camagüey, Cuba. (2024)</span></li>
+                    <li><span class="es">Programación Avanzada, Maestría en Informática Aplicada. Universidad de Camagüey, Cuba. (2023).</span><span class="en">Advanced Programming, Master in Applied Informatics. University of Camagüey, Cuba. (2023).</span></li>
+                    <li><span class="es">Matemática Discreta y Computacional, Maestría en Informática Aplicada. Universidad de Camagüey, Cuba. (2023).</span><span class="en">Discrete and Computational Mathematics, Master in Applied Informatics. University of Camagüey, Cuba. (2023).</span></li>
+                    <li><span class="es">Inteligencia Artificial: actualidad y perspectivas. Asociado al Simposio Internacional “Transferencia de Tecnologías de la Información”, en el marco de la II Convención Internacional 2021. Universidad Central de las Villas, Villa Clara, Cuba. (2021)</span><span class="en">Artificial Intelligence: Current Status and Prospects. Associated with the International Symposium "Information Technology Transfer", within the framework of the II International Convention 2021. Central University of Las Villas, Villa Clara, Cuba. (2021)</span></li>
+                    <li><span class="es">Introducción al Big Data y procesamiento distribuido. Asociado al Simposio Internacional “Transferencia de Tecnologías de la Información”, en el marco de la II Convención Internacional 2021. Universidad Central de las Villas, Villa Clara, Cuba. (2021)</span><span class="en">Introduction to Big Data and Distributed Processing. Associated with the International Symposium "Information Technology Transfer", within the framework of the II International Convention 2021. Central University of Las Villas, Villa Clara, Cuba. (2021)</span></li>
+                    <li><span class="es">Taller “Marco de Evaluación de impactos para proyectos de I+D+i”. Universidad de Camagüey, Cuba. (2020)</span><span class="en">Workshop "Impact Assessment Framework for R&D&I Projects". University of Camagüey, Cuba. (2020)</span></li>
+                    <li><span class="es">Algoritmización. Maestría en Ingeniería Mecánica. Universidad de Camagüey, Cuba. (2019).</span><span class="en">Algorithmization. Master in Mechanical Engineering. University of Camagüey, Cuba. (2019).</span></li>
+                    <li><span class="es">Matemática Avanzada. Maestría en Ingeniería Eléctrica. Universidad de Camagüey, Cuba. (2019).</span><span class="en">Advanced Mathematics. Master in Electrical Engineering. University of Camagüey, Cuba. (2019).</span></li>
+                    <li><span class="es">Matemática Discreta y Computacional, Maestría en Informática Aplicada. Universidad de Camagüey, Cuba. (2018).</span><span class="en">Discrete and Computational Mathematics, Master in Applied Informatics. University of Camagüey, Cuba. (2018).</span></li>
+                    <li><span class="es">Programación Avanzada, Maestría en Informática Aplicada. Universidad de Camagüey, Cuba. (2018).</span><span class="en">Advanced Programming, Master in Applied Informatics. University of Camagüey, Cuba. (2018).</span></li>
+                    <li><span class="es">Matemática Discreta y Computacional, Maestría en Informática Aplicada. Universidad de Camagüey, Cuba. (2017).</span><span class="en">Discrete and Computational Mathematics, Master in Applied Informatics. University of Camagüey, Cuba. (2017).</span></li>
+                    <li><span class="es">Programación Avanzada, Maestría en Informática Aplicada. Universidad de Camagüey, Cuba. (2017).</span><span class="en">Advanced Programming, Master in Applied Informatics. University of Camagüey, Cuba. (2017).</span></li>
+                    <li><span class="es">Programación Avanzada, Maestría en Informática Aplicada. Universidad de Camagüey, Cuba. (2015).</span><span class="en">Advanced Programming, Master in Applied Informatics. University of Camagüey, Cuba. (2015).</span></li>
+                    <li><span class="es">Matemática Discreta y Computacional, Maestría en Informática Aplicada. Universidad de Camagüey, Cuba. (2015).</span><span class="en">Discrete and Computational Mathematics, Master in Applied Informatics. University of Camagüey, Cuba. (2015).</span></li>
+                    <li><span class="es">Matemática Computacional, Maestría en Informática Aplicada. Universidad de Camagüey, Cuba. (2014).</span><span class="en">Computational Mathematics, Master in Applied Informatics. University of Camagüey, Cuba. (2014).</span></li>
+                    <li><span class="es">Temas Selectos de Matemática Discreta, Maestría en Informática Aplicada. Universidad de Camagüey, Cuba. (2014).</span><span class="en">Selected Topics in Discrete Mathematics, Master in Applied Informatics. University of Camagüey, Cuba. (2014).</span></li>
+                    <li><span class="es">Programación Avanzada, Maestría en Informática Aplicada. Universidad de Camagüey, Cuba. (2014).</span><span class="en">Advanced Programming, Master in Applied Informatics. University of Camagüey, Cuba. (2014).</span></li>
+                    <li><span class="es">Programación Avanzada, Maestría en Informática Aplicada. Universidad del Norte del Táchira, Venezuela. (2014).</span><span class="en">Advanced Programming, Master in Applied Informatics. University of Norte del Táchira, Venezuela. (2014).</span></li>
+                    <li><span class="es">Programación Avanzada, Maestría en Informática Aplicada. Universidad de Camagüey, Cuba. (2013).</span><span class="en">Advanced Programming, Master in Applied Informatics. University of Camagüey, Cuba. (2013).</span></li>
+                    <li><span class="es">Temas Selectos de Matemática Discreta, Maestría en Informática Aplicada. Universidad de las Ciencias Informáticas, Cuba. (2012).</span><span class="en">Selected Topics in Discrete Mathematics, Master in Applied Informatics. University of Informatics Sciences, Cuba. (2012).</span></li>
+                    <li><span class="es">Programación Avanzada, Maestría en Informática Aplicada. Universidad de Camagüey, Cuba. (2012).</span><span class="en">Advanced Programming, Master in Applied Informatics. University of Camagüey, Cuba. (2012).</span></li>
+                    <li><span class="es">Redes de Comunicaciones y Tecnología Web. Universidad Mayor de San Andrés, Bolivia. (2011).</span><span class="en">Communication Networks and Web Technology. Higher University of San Andrés, Bolivia. (2011).</span></li>
+                    <li><span class="es">Inteligencia Artificial Avanzada, Maestría en Informática Aplicada. Universidad de las Tunas, Cuba. (2010).</span><span class="en">Advanced Artificial Intelligence, Master in Applied Informatics. University of Las Tunas, Cuba. (2010).</span></li>
+                    <li><span class="es">Temas Selectos de Matemática Discreta, Maestría en Informática Aplicada. Universidad de Camagüey, Cuba. (2009).</span><span class="en">Selected Topics in Discrete Mathematics, Master in Applied Informatics. University of Camagüey, Cuba. (2009).</span></li>
+                    <li><span class="es">Temas Selectos de Matemática Discreta, Maestría en Informática Aplicada. Universidad de Camagüey, Cuba. (2008).</span><span class="en">Selected Topics in Discrete Mathematics, Master in Applied Informatics. University of Camagüey, Cuba. (2008).</span></li>
+                    <li><span class="es">Inteligencia Artificial Avanzada, Maestría en Informática Aplicada. Universidad de Camagüey, Cuba. (2007).</span><span class="en">Advanced Artificial Intelligence, Master in Applied Informatics. University of Camagüey, Cuba. (2007).</span></li>
+                    <li><span class="es">Software del Sistema, Maestría en Informática Aplicada. Universidad de Camagüey, Cuba. (2007).</span><span class="en">System Software, Master in Applied Informatics. University of Camagüey, Cuba. (2007).</span></li>
+                    <li><span class="es">Matemática Computacional, Maestría en Informática Aplicada. Universidad de Camagüey, Cuba. (2006).</span><span class="en">Computational Mathematics, Master in Applied Informatics. University of Camagüey, Cuba. (2006).</span></li>
+                    <li><span class="es">Estado Actual en el Desarrollo de Aplicaciones Informáticas Empresariales. Curso Preevento. Tercer Seminario Internacional de Matemática, Física e Informática Educativa. Universidad de Camagüey. Cuba. (2004)</span><span class="en">Current State in the Development of Business Software Applications. Pre-event Course. Third International Seminar on Mathematics, Physics, and Educational Informatics. University of Camagüey. Cuba. (2004)</span></li>
+                    <li><span class="es">Curso de Programación en Web. Universidad de Camagüey. Cuba. (2002)</span><span class="en">Web Programming Course. University of Camagüey. Cuba. (2002)</span></li>
+                    <li><span class="es">Curso Desarrollo de Aplicaciones Para el WWW. Universidad de Camagüey. Cuba. (2002)</span><span class="en">WWW Application Development Course. University of Camagüey. Cuba. (2002)</span></li>
+                    <li><span class="es">Curso Desarrollo de Aplicaciones Para el WWW.  Universidad de Camagüey. Cuba. (2001)</span><span class="en">WWW Application Development Course. University of Camagüey. Cuba. (2001)</span></li>
+                    <li><span class="es">Desarrollo de Aplicaciones Paralelas con la Biblioteca MPI. Curso Preevento. Primer Evento Internacional Matemática Educativa e Informática. Universidad de Camagüey. Cuba. (2000)</span><span class="en">Development of Parallel Applications with the MPI Library. Pre-event Course. First International Event on Educational Mathematics and Informatics. University of Camagüey. Cuba. (2000)</span></li>
+                    <li><span class="es">Curso de Introducción a la Programación. 90 horas. Universidad de Camagüey. Cuba.</span><span class="en">Introduction to Programming Course. 90 hours. University of Camagüey. Cuba.</span></li>
+                    <li><span class="es">Curso de Programación Avanzada. 2000. 80 horas. Universidad de Camagüey. Camagüey. Cuba.</span><span class="en">Advanced Programming Course. 2000. 80 hours. University of Camagüey. Camagüey. Cuba.</span></li>
+                    <li><span class="es">Curso de Herramientas para el uso de Windows. 1999. 20 horas. Centro de Ingeniería Genética y Biotecnología. Camagüey, Cuba.</span><span class="en">Tools for Using Windows Course. 1999. 20 hours. Center for Genetic Engineering and Biotechnology. Camagüey, Cuba.</span></li>
+                    <li><span class="es">Curso de Windows 95. 1998. 20 horas. Centro de Ingeniería Genética y Biotecnología. Camagüey, Cuba.</span><span class="en">Windows 95 Course. 1998. 20 hours. Center for Genetic Engineering and Biotechnology. Camagüey, Cuba.</span></li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <footer>
+        <div class="social-media">
+            <a href="#" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
