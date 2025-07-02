@@ -55,4 +55,21 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', activateNavLink);
     activateNavLink(); // Set active link on page load
 
+    // --- PDF Export --- 
+    const exportButton = document.getElementById('export-pdf');
+    exportButton.addEventListener('click', () => {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+
+        const mainContent = document.querySelector('.main-content');
+        html2canvas(mainContent).then(canvas => {
+            const imgData = canvas.toDataURL('image/png');
+            const imgProps= doc.getImageProperties(imgData);
+            const pdfWidth = doc.internal.pageSize.getWidth();
+            const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+            doc.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+            doc.save('juliocesar_madera_quintana.pdf');
+        });
+    });
+
 });
