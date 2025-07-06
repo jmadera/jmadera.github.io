@@ -1,11 +1,12 @@
 :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
-    --light-gray: #ecf0f1;
-    --dark-gray: #34495e;
-    --background-color: #f8f9fa;
+    --primary-color: #1f2937; /* dark slate */
+    --secondary-color: #ff6b6b; /* vibrant coral */
+    --light-gray: #f0f2f5;
+    --dark-gray: #374151;
+    --background-color: #ffffff;
     --sidebar-bg: #ffffff;
-    --card-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    --card-shadow: 0 6px 16px rgba(0,0,0,0.06);
+    --gradient-header: linear-gradient(135deg,#4b6cb7,#182848);
 }
 
 * {
@@ -19,9 +20,9 @@ html {
 }
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    background-color: var(--background-color);
+    background: linear-gradient(180deg, var(--background-color) 0%, var(--light-gray) 100%);
     color: var(--primary-color);
     padding-top: 60px; /* Space for fixed header */
 }
@@ -35,7 +36,8 @@ body {
 
 /* --- Header and Navigation --- */
 .main-header {
-    background-color: var(--sidebar-bg);
+    background: var(--gradient-header);
+    color: white;
     box-shadow: var(--card-shadow);
     position: fixed;
     top: 0;
@@ -55,7 +57,7 @@ body {
 }
 
 .nav-links a {
-    color: var(--primary-color);
+    color: white;
     text-decoration: none;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
@@ -71,12 +73,14 @@ body {
 }
 
 .lang-switcher button {
-    background: none;
-    border: 1px solid var(--light-gray);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
     padding: 5px 10px;
     margin-left: 5px;
     cursor: pointer;
     font-weight: 600;
+    border-radius: 4px;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -92,11 +96,16 @@ body {
     flex-shrink: 0;
     background-color: var(--sidebar-bg);
     padding: 30px;
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: var(--card-shadow);
     height: fit-content;
     position: sticky;
     top: 80px;
+    transition: box-shadow 0.3s;
+}
+
+.sidebar:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
 .profile {
@@ -161,8 +170,14 @@ body {
     background-color: var(--sidebar-bg);
     padding: 30px;
     margin-bottom: 20px;
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: var(--card-shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.main-content section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
 .main-content h2 {
