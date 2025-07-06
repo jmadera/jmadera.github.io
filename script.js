@@ -45,42 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     highlightCurrentPage();
 
-    // --- PDF Export --- 
+    // --- PDF Download ---
     const exportButton = document.getElementById('export-pdf');
     exportButton.addEventListener('click', () => {
-        const { jsPDF } = window.jspdf;
-        const doc = new jsPDF('p', 'pt', 'a4');
-        const mainContent = document.querySelector('.main-content');
-
-        html2canvas(mainContent, {
-            useCORS: true,
-            scale: 2, // Aumenta la resolución de la imagen
-        }).then(canvas => {
-            const imgData = canvas.toDataURL('image/png');
-            const imgProps = doc.getImageProperties(imgData);
-            const imgWidth = imgProps.width;
-            const imgHeight = imgProps.height;
-
-            const pdfWidth = doc.internal.pageSize.getWidth();
-            const pdfHeight = (imgHeight * pdfWidth) / imgWidth; // Total height of the content scaled to PDF width
-
-            const marginTop = 40; // points
-            const marginBottom = 40; // points
-            const pageHeight = doc.internal.pageSize.getHeight();
-            const usablePageHeight = pageHeight - marginTop - marginBottom;
-
-            let pages = Math.ceil(pdfHeight / usablePageHeight); // Number of pages needed
-
-            for (let i = 0; i < pages; i++) {
-                if (i > 0) {
-                    doc.addPage();
-                }
-                const yOffset = -i * usablePageHeight; // How much to shift the image up
-                doc.addImage(imgData, 'PNG', 0, yOffset + marginTop, pdfWidth, pdfHeight);
-            }
-
-            doc.save('juliocesar_madera_quintana.pdf');
-        });
+        const lang = localStorage.getItem('language') || 'es';
+        const pdfFile = lang === 'en' ? 'files/julio_madera_en.pdf' : 'files/julio_madera_es.pdf';
+        window.open(pdfFile, '_blank');
     });
 
 });
