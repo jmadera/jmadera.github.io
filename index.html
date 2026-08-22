@@ -1,86 +1,121 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es" data-language="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. C. Julio César Madera Quintana</title>
-    <link rel="icon" type="image/jpeg" href="images/profile.jpg">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sitio académico de Julio Madera: investigación en inteligencia artificial, aprendizaje automático, optimización y algoritmos de estimación de distribuciones.">
+  <meta name="theme-color" content="#123b6d">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Julio Madera | Research Portfolio">
+  <meta property="og:description" content="Sitio académico de Julio Madera: investigación en inteligencia artificial, aprendizaje automático, optimización y algoritmos de estimación de distribuciones.">
+  <meta property="og:url" content="https://jmadera.github.io/index.html">
+  <meta property="og:image" content="https://jmadera.github.io/images/profile.jpg">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://jmadera.github.io/index.html">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" type="image/jpeg" href="images/profile.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Julio Madera | Research Portfolio</title>
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch(e){}</script>
 </head>
 <body>
-
-    <header class="main-header">
-        <nav class="main-nav">
-            <div class="nav-links">
-                <a href="index.html"><span class="es">Sobre mí</span><span class="en">About</span></a>
-                <a href="publications.html"><span class="es">Publicaciones</span><span class="en">Publications</span></a>
-                <a href="awards.html"><span class="es">Premios</span><span class="en">Awards</span></a>
-                <a href="responsibilities.html"><span class="es">Responsabilidades</span><span class="en">Responsibilities</span></a>
-                <a href="postgraduate-courses.html"><span class="es">Cursos de Postgrado</span><span class="en">Postgraduate Courses</span></a>
-            </div>
-            <div class="lang-switcher">
-                <button id="lang-es" class="active">ES</button>
-                <button id="lang-en">EN</button>
-                <button id="export-pdf"><i class="fa-solid fa-file-pdf"></i></button>
-            </div>
-        </nav>
-    </header>
-
-    <div class="container">
-        <aside class="sidebar">
-            <div class="profile">
-                <img src="images/profile.jpg" alt="Foto de Julio César Madera Quintana" class="profile-img">
-                <h1>Dr. C. Julio César Madera Quintana</h1>
-                <p class="title"><span class="es">Profesor Titular, Universidad de Camagüey</span><span class="en">Full Professor, University of Camagüey</span></p>
-            </div>
-            <div class="contact-info">
-                <h4><span class="es">Contacto</span><span class="en">Contact</span></h4>
-                <p><strong>Email:</strong><br> <a href="mailto:julio.madera@reduc.edu.cu">julio.madera@reduc.edu.cu</a></p>
-            </div>
-        </aside>
-
-        <main class="main-content">
-            <section id="about">
-                <h2><span class="es">Sobre mí</span><span class="en">About Me</span></h2>
-                <p>
-                    <span class="es">Doctor en Ciencias Matemáticas y Licenciado en Ciencias de la Computación con una extensa carrera como Profesor Titular en la Universidad de Camagüey. Mi trabajo se centra en la Inteligencia Artificial, Algoritmos de Estimación de Distribuciones, Aprendizaje Automático y Optimización. Cuento con una sólida trayectoria en investigación, reflejada en numerosas publicaciones en revistas y conferencias internacionales, así como en la dirección de tesis de doctorado y maestría. Mi objetivo es aplicar modelos computacionales avanzados para resolver problemas complejos del mundo real.</span>
-                    <span class="en">Doctor in Mathematical Sciences and Bachelor in Computer Science with an extensive career as a Full Professor at the University of Camagüey. My work focuses on Artificial Intelligence, Estimation of Distribution Algorithms, Machine Learning, and Optimization. I have a strong research background, reflected in numerous publications in international journals and conferences, as well as in the supervision of doctoral and master's theses. My goal is to apply advanced computational models to solve complex real-world problems.</span>
-                </p>
-            </section>
-
-            <section id="studies">
-                <h2><span class="es">Estudios</span><span class="en">Education</span></h2>
-                <ul>
-                    <li><span class="es">Instituto de Cibernética, Matemática y Física (2006–2010) Doctor en Ciencias Matemáticas.</span><span class="en">Institute of Cybernetics, Mathematics and Physics (2006–2010) Doctor of Mathematical Sciences.</span></li>
-                    <li><span class="es">Universidad de Camagüey (2005–2007) Máster en Informática Aplicada.</span><span class="en">University of Camagüey (2005–2007) Master's in Applied Informatics.</span></li>
-                    <li><span class="es">Universidad Central de las Villas (1992–1997) Licenciado en Ciencias de la Computación.</span><span class="en">Central University of Las Villas (1992–1997) Bachelor in Computer Science.</span></li>
-                </ul>
-            </section>
-
-            <section id="experience">
-                <h2><span class="es">Experiencia Profesional</span><span class="en">Professional Experience</span></h2>
-                <ul>
-                    <li><span class="es">Septiembre de 1997 – Mayo del 2000</span><span class="en">September 1997 – May 2000</span></li>
-                    <li><span class="es">Administración de Redes. Atención a sistemas económicos y soporte a usuario.</span><span class="en">Network administration. Economic systems support and user assistance.</span></li>
-                    <li><span class="es">Centro de Ingeniería Genética y Biotecnología. Camagüey, Cuba.</span><span class="en">Center for Genetic Engineering and Biotechnology. Camagüey, Cuba.</span></li>
-                </ul>
-            </section>
-
-        </main>
+<a class="skip-link" href="#main-content"><span class="es">Saltar al contenido</span><span class="en">Skip to content</span></a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="Julio Madera, inicio"><span>Julio Madera</span><small>Research Portfolio</small></a>
+    <button class="menu-button" type="button" data-menu-toggle aria-expanded="false" aria-controls="primary-nav">☰</button>
+    <nav class="primary-nav" id="primary-nav" data-primary-nav aria-label="<span class="es">Navegación principal</span><span class="en">Primary navigation</span>">
+      <div class="nav-links">
+        <a href="index.html"><span class="es">Inicio</span><span class="en">Home</span></a>
+        <a href="research.html"><span class="es">Investigación</span><span class="en">Research</span></a>
+        <a href="publications.html"><span class="es">Publicaciones</span><span class="en">Publications</span></a>
+        <a href="projects.html"><span class="es">Proyectos</span><span class="en">Projects</span></a>
+        <a href="teaching.html"><span class="es">Docencia</span><span class="en">Teaching</span></a>
+        <a href="leadership.html"><span class="es">Liderazgo</span><span class="en">Leadership</span></a>
+        <a href="awards.html"><span class="es">Premios</span><span class="en">Awards</span></a>
+        <a href="cv.html">CV</a>
+        <a href="contact.html"><span class="es">Contacto</span><span class="en">Contact</span></a>
+      </div>
+      <div class="utility-controls" aria-label="<span class="es">Preferencias</span><span class="en">Preferences</span>">
+        <button class="language-button" type="button" data-language-control="es" aria-pressed="true">ES</button>
+        <button class="language-button" type="button" data-language-control="en" aria-pressed="false">EN</button>
+        <button class="utility-button" type="button" data-theme-toggle aria-pressed="false" title="<span class="es">Cambiar modo de color</span><span class="en">Change color mode</span>">◐</button>
+      </div>
+    </nav>
+  </div>
+</header>
+<main class="site-main" id="main-content">
+  <section class="hero" aria-labelledby="home-title">
+    <div>
+      <p class="eyebrow"><span class="es">Universidad de Camagüey</span><span class="en">University of Camagüey</span></p>
+      <h1 id="home-title">Dr. C. Julio César<br>Madera Quintana</h1>
+      <p class="hero-role"><span class="es">Profesor Titular · Ciencias de la Computación</span><span class="en">Full Professor · Computer Science</span></p>
+      <p class="hero-keywords">Artificial Intelligence · Machine Learning · Optimization · Estimation of Distribution Algorithms</p>
+      <div class="hero-actions">
+        <a class="button" href="research.html"><span class="es">Explorar investigación</span><span class="en">Explore research</span></a>
+        <a class="button secondary" href="publications.html"><span class="es">Ver publicaciones</span><span class="en">View publications</span></a>
+        <a class="button secondary" href="cv.html">CV</a>
+      </div>
     </div>
+    <figure class="hero-portrait">
+      <img src="images/profile.jpg" width="700" height="875" alt="<span class="es">Retrato de Julio César Madera Quintana</span><span class="en">Portrait of Julio César Madera Quintana</span>">
+      <figcaption><span class="es">Espacio académico personal</span><span class="en">Personal academic space</span></figcaption>
+    </figure>
+  </section>
 
-    <script src="script.js"></script>
-    <footer>
-        <div class="social-media">
-            <a href="#" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-            <a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-        </div>
-    </footer>
+  <section class="section" aria-labelledby="research-at-a-glance">
+    <div class="section-heading">
+      <p class="eyebrow"><span class="es">Perfil científico</span><span class="en">Scientific profile</span></p>
+      <h2 id="research-at-a-glance"><span class="es">Investigación, de un vistazo</span><span class="en">Research at a glance</span></h2>
+      <p><span class="es">Doctor en Ciencias Matemáticas y Licenciado en Ciencias de la Computación. Su trabajo se centra en la inteligencia artificial, los algoritmos de estimación de distribuciones, el aprendizaje automático y la optimización.</span><span class="en">Doctor in Mathematical Sciences and Bachelor in Computer Science. His work focuses on artificial intelligence, estimation of distribution algorithms, machine learning, and optimization.</span></p>
+    </div>
+    <div class="topic-grid">
+      <article class="topic-card"><span class="code">AI</span><h3>Artificial Intelligence</h3><p><span class="es">Métodos computacionales avanzados para problemas complejos.</span><span class="en">Advanced computational methods for complex problems.</span></p></article>
+      <article class="topic-card"><span class="code">ML</span><h3>Machine Learning</h3><p><span class="es">Modelos de aprendizaje para el análisis y la toma de decisiones.</span><span class="en">Learning models for analysis and decision-making.</span></p></article>
+      <article class="topic-card"><span class="code">OPT</span><h3>Optimization</h3><p><span class="es">Estrategias computacionales para problemas de optimización.</span><span class="en">Computational strategies for optimization problems.</span></p></article>
+      <article class="topic-card"><span class="code">EDA</span><h3>Estimation of Distribution Algorithms</h3><p><span class="es">Una línea central de investigación en algoritmos evolutivos.</span><span class="en">A core research line in evolutionary algorithms.</span></p></article>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="selected-publications">
+    <div class="section-heading">
+      <p class="eyebrow"><span class="es">Producción científica</span><span class="en">Scientific output</span></p>
+      <h2 id="selected-publications"><span class="es">Publicaciones seleccionadas</span><span class="en">Selected publications</span></h2>
+    </div>
+    <div class="publication-spotlight">
+      <article><time datetime="2024">2024</time><div><h3>Exploring blood–brain barrier passage using atomic weighted vector and machine learning</h3><p>Journal of Molecular Modeling, 30(11). <a href="https://doi.org/10.1007/s00894-024-06188-5" target="_blank" rel="noopener">DOI</a></p></div></article>
+      <article><time datetime="2023">2023</time><div><h3>Optimizing Energy Operation and Planning using Ring Cellular Encode-Decode Univariate Marginal Distribution Algorithm</h3><p>GECCO ’23 Companion. <a href="https://doi.org/10.1145/3583133.3596422" target="_blank" rel="noopener">DOI</a></p></div></article>
+      <article><time datetime="2022">2022</time><div><h3>A hybrid method based on Estimation of Distribution Algorithms to train Convolutional Neural Networks for text categorization</h3><p>Pattern Recognition Letters. <a href="https://doi.org/10.1016/j.patrec.2022.06.008" target="_blank" rel="noopener">DOI</a></p></div></article>
+    </div>
+    <div class="button-row"><a class="button secondary" href="publications.html"><span class="es">Todas las publicaciones</span><span class="en">All publications</span></a></div>
+  </section>
+
+  <section class="section" aria-labelledby="trajectory">
+    <div class="section-heading">
+      <p class="eyebrow"><span class="es">Trayectoria</span><span class="en">Trajectory</span></p>
+      <h2 id="trajectory"><span class="es">Formación y experiencia</span><span class="en">Education and experience</span></h2>
+    </div>
+    <div class="timeline">
+      <article><time>2006–2010</time><h3><span class="es">Doctor en Ciencias Matemáticas</span><span class="en">Doctor of Mathematical Sciences</span></h3><p><span class="es">Instituto de Cibernética, Matemática y Física.</span><span class="en">Institute of Cybernetics, Mathematics and Physics.</span></p></article>
+      <article><time>2005–2007</time><h3><span class="es">Máster en Informática Aplicada</span><span class="en">Master’s in Applied Informatics</span></h3><p><span class="es">Universidad de Camagüey.</span><span class="en">University of Camagüey.</span></p></article>
+      <article><time>1997–2000</time><h3><span class="es">Experiencia profesional</span><span class="en">Professional experience</span></h3><p><span class="es">Administración de redes, atención a sistemas económicos y soporte a usuarios en el Centro de Ingeniería Genética y Biotecnología, Camagüey.</span><span class="en">Network administration, economic-systems support, and user assistance at the Center for Genetic Engineering and Biotechnology, Camagüey.</span></p></article>
+      <article><time>1992–1997</time><h3><span class="es">Licenciado en Ciencias de la Computación</span><span class="en">Bachelor in Computer Science</span></h3><p><span class="es">Universidad Central de Las Villas.</span><span class="en">Central University of Las Villas.</span></p></article>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>© Julio Madera</span>
+    <div class="footer-links">
+      <a href="mailto:julio.madera@reduc.edu.cu">julio.madera@reduc.edu.cu</a>
+      <a href="https://github.com/jmadera" target="_blank" rel="noopener">GitHub</a>
+      <a href="cv.html">CV</a>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>

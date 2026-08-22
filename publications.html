@@ -1,56 +1,69 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es" data-language="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. C. Julio César Madera Quintana</title>
-    <link rel="icon" type="image/jpeg" href="images/profile.jpg">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Publicaciones científicas de Julio Madera.">
+  <meta name="theme-color" content="#123b6d">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Publications | Julio Madera">
+  <meta property="og:description" content="Publicaciones científicas de Julio Madera.">
+  <meta property="og:url" content="https://jmadera.github.io/publications.html">
+  <meta property="og:image" content="https://jmadera.github.io/images/profile.jpg">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://jmadera.github.io/publications.html">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" type="image/jpeg" href="images/profile.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Publications | Julio Madera</title>
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch(e){}</script>
 </head>
 <body>
-
-    <header class="main-header">
-        <nav class="main-nav">
-            <div class="nav-links">
-                <a href="index.html"><span class="es">Sobre mí</span><span class="en">About</span></a>
-                <a href="publications.html"><span class="es">Publicaciones</span><span class="en">Publications</span></a>
-                <a href="awards.html"><span class="es">Premios</span><span class="en">Awards</span></a>
-                <a href="responsibilities.html"><span class="es">Responsabilidades</span><span class="en">Responsibilities</span></a>
-                <a href="postgraduate-courses.html"><span class="es">Cursos de Postgrado</span><span class="en">Postgraduate Courses</span></a>
-            </div>
-            <div class="lang-switcher">
-                <button id="lang-es" class="active">ES</button>
-                <button id="lang-en">EN</button>
-                <button id="export-pdf"><i class="fa-solid fa-file-pdf"></i></button>
-            </div>
-        </nav>
-    </header>
-
-    <div class="container">
-        <aside class="sidebar">
-            <div class="profile">
-                <img src="images/profile.jpg" alt="Foto de Julio César Madera Quintana" class="profile-img">
-                <h1>Dr. C. Julio César Madera Quintana</h1>
-                <p class="title"><span class="es">Profesor Titular, Universidad de Camagüey</span><span class="en">Full Professor, University of Camagüey</span></p>
-            </div>
-            <div class="contact-info">
-                <h4><span class="es">Contacto</span><span class="en">Contact</span></h4>
-                <p><strong>Email:</strong><br> <a href="mailto:julio.madera@reduc.edu.cu">julio.madera@reduc.edu.cu</a></p>
-            </div>
-        </aside>
-
-        <main class="main-content">
-
-
-            
-            <section id="publications">
+<a class="skip-link" href="#main-content"><span class="es">Saltar al contenido</span><span class="en">Skip to content</span></a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="Julio Madera, inicio"><span>Julio Madera</span><small>Research Portfolio</small></a>
+    <button class="menu-button" type="button" data-menu-toggle aria-expanded="false" aria-controls="primary-nav">☰</button>
+    <nav class="primary-nav" id="primary-nav" data-primary-nav aria-label="<span class="es">Navegación principal</span><span class="en">Primary navigation</span>">
+      <div class="nav-links">
+        <a href="index.html"><span class="es">Inicio</span><span class="en">Home</span></a>
+        <a href="research.html"><span class="es">Investigación</span><span class="en">Research</span></a>
+        <a href="publications.html"><span class="es">Publicaciones</span><span class="en">Publications</span></a>
+        <a href="projects.html"><span class="es">Proyectos</span><span class="en">Projects</span></a>
+        <a href="teaching.html"><span class="es">Docencia</span><span class="en">Teaching</span></a>
+        <a href="leadership.html"><span class="es">Liderazgo</span><span class="en">Leadership</span></a>
+        <a href="awards.html"><span class="es">Premios</span><span class="en">Awards</span></a>
+        <a href="cv.html">CV</a>
+        <a href="contact.html"><span class="es">Contacto</span><span class="en">Contact</span></a>
+      </div>
+      <div class="utility-controls" aria-label="<span class="es">Preferencias</span><span class="en">Preferences</span>">
+        <button class="language-button" type="button" data-language-control="es" aria-pressed="true">ES</button>
+        <button class="language-button" type="button" data-language-control="en" aria-pressed="false">EN</button>
+        <button class="utility-button" type="button" data-theme-toggle aria-pressed="false" title="<span class="es">Cambiar modo de color</span><span class="en">Change color mode</span>">◐</button>
+      </div>
+    </nav>
+  </div>
+</header>
+<main class="site-main" id="main-content">
+  <header class="page-header">
+  <p class="meta"><span class="es">Publicaciones</span><span class="en">Publications</span></p>
+  <h1><span class="es">Producción científica</span><span class="en">Scientific output</span></h1>
+  <p><span class="es">Listado de publicaciones migrado del sitio anterior, con búsqueda y filtrado por año.</span><span class="en">Publication list migrated from the previous site, with search and year filtering.</span></p>
+</header>
+  <div class="archive-page">
+    <div class="filters" aria-label="<span class="es">Filtros de publicaciones</span><span class="en">Publication filters</span>">
+      <label for="publication-search"><span class="es">Buscar por autor, título, revista o palabra clave</span><span class="en">Search by author, title, venue, or keyword</span></label>
+      <input class="search-input" id="publication-search" data-publication-search type="search" autocomplete="off" placeholder="<span class="es">Ej.: optimization, 2024, energía…</span><span class="en">E.g.: optimization, 2024, energy…</span>">
+      <div class="filter-buttons" data-publication-filters aria-label="<span class="es">Filtrar por año</span><span class="en">Filter by year</span>"></div>
+      <p class="filter-status" data-publication-status aria-live="polite"></p>
+    </div>
+    <section class="archive-section">
                 <h2><span class="es">Publicaciones</span><span class="en">Publications</span></h2>
                 <p><span class="es">Para una lista completa, por favor consulte mi perfil en Google Scholar o ResearchGate.</span><span class="en">For a complete list, please see my Google Scholar or ResearchGate profile.</span></p>
-                <ul>
+                <ul class="archive-list publication-list" data-publication-list>
                     <li><span class="es">Martínez-López, Yoan, Phoobane, Paulina, Jauriga, Yanaima, Castillo-Garit, Juan A.,  Rodríguez-Gonzalez, Ansel Y., Martínez-Santiago, Oscar, Barigye, Stephen J., Madera, Julio, Rodríguez-Maya, Noel & Enrique and Duchowicz, Pablo (2024). Exploring blood–brain barrier passage using atomic weighted vector and machine learning. Journal of Molecular Modeling, 30(11). https://doi.org/10.1007/s00894-024-06188-5. (Scopus)</span><span class="en">Martínez-López, Yoan, Phoobane, Paulina, Jauriga, Yanaima, Castillo-Garit, Juan A.,  Rodríguez-Gonzalez, Ansel Y., Martínez-Santiago, Oscar, Barigye, Stephen J., Madera, Julio, Rodríguez-Maya, Noel & Enrique and Duchowicz, Pablo (2024). Exploring blood–brain barrier passage using atomic weighted vector and machine learning. Journal of Molecular Modeling, 30(11). https://doi.org/10.1007/s00894-024-06188-5. (Scopus)</span></li>
                     <li><span class="es">Alfredo Javier Simón-Cuevas, Orlando Grabiel Toledano López, Julio Madera Quintana, Héctor Raúl González Diez, Alejandro Ariel Ramón Hernández, María Matilde García Lorenzo, Jesús Serrano Guerrero, José Ángel Olivas Varela, Leticia Arco García, José Manuel Perea Ortega, Francisco P. Romero, Oscar Miguel González Parets, Patricia Montañez Castelo (2024). Contribuciones al análisis de sentimientos en opiniones de usuario aplicando técnicas y algoritmos de inteligencia artificial. Anales de la Academia de Ciencias de Cuba, 14(3), 1674. (Scopus)</span><span class="en">Alfredo Javier Simón-Cuevas, Orlando Grabiel Toledano López, Julio Madera Quintana, Héctor Raúl González Diez, Alejandro Ariel Ramón Hernández, María Matilde García Lorenzo, Jesús Serrano Guerrero, José Ángel Olivas Varela, Leticia Arco García, José Manuel Perea Ortega, Francisco P. Romero, Oscar Miguel González Parets, Patricia Montañez Castelo (2024). Contributions to sentiment analysis in user opinions applying artificial intelligence techniques and algorithms. Anales de la Academia de Ciencias de Cuba, 14(3), 1674. (Scopus)</span></li>
                     <li><span class="es">Hernández-González, A., Madera-Quintana, J., & Simón-Cuevas, A. (2024). Uc-cujae at homo-mex 2024: Detecting hate speech against the lgtb+ community using transformers on imbalanced datasets. In Proceedings of the Iberian Languages Evaluation Forum (IberLEF 2024), co-located with the 40th Conference of the Spanish Society for Natural Language Processing (SEPLN 2024), CEUR-WS.org. (Scopus)</span><span class="en">Hernández-González, A., Madera-Quintana, J., & Simón-Cuevas, A. (2024). Uc-cujae at homo-mex 2024: Detecting hate speech against the lgtb+ community using transformers on imbalanced datasets. In Proceedings of the Iberian Languages Evaluation Forum (IberLEF 2024), co-located with the 40th Conference of the Spanish Society for Natural Language Processing (SEPLN 2024), CEUR-WS.org. (Scopus)</span></li>
@@ -116,20 +129,18 @@ Institute of Cybernetics, Mathematics and Physics (ICIMAF), 2006</span></li>
                     <li><span class="es">A. Ochoa, M. Soto, R. Santana, J. Madera and N. Jorge. “The Factorized Distribution Algorithm and The Junction Tree”. Proceedings of the Second Symposium on Artificial Intelligence. Adaptative Systems. Pag. 368 – 377.</span><span class="en">A. Ochoa, M. Soto, R. Santana, J. Madera and N. Jorge. “The Factorized Distribution Algorithm and The Junction Tree”. Proceedings of the Second Symposium on Artificial Intelligence. Adaptative Systems. Pag. 368 – 377.</span></li>
                 </ul>
             </section>
-
-
-
-        </main>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>© Julio Madera</span>
+    <div class="footer-links">
+      <a href="mailto:julio.madera@reduc.edu.cu">julio.madera@reduc.edu.cu</a>
+      <a href="https://github.com/jmadera" target="_blank" rel="noopener">GitHub</a>
+      <a href="cv.html">CV</a>
     </div>
-
-    <script src="script.js"></script>
-    <footer>
-        <div class="social-media">
-            <a href="#" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-            <a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-        </div>
-    </footer>
+  </div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
