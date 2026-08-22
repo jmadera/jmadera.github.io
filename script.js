@@ -12,6 +12,16 @@
     const setLanguage = (language) => {
       root.dataset.language = language;
       root.lang = language;
+      const suffix = language === 'es' ? 'Es' : 'En';
+      document.querySelectorAll('[data-label-es]').forEach((element) => {
+        element.setAttribute('aria-label', element.dataset['label' + suffix]);
+      });
+      document.querySelectorAll('[data-placeholder-es]').forEach((element) => {
+        element.setAttribute('placeholder', element.dataset['placeholder' + suffix]);
+      });
+      document.querySelectorAll('[data-alt-es]').forEach((element) => {
+        element.setAttribute('alt', element.dataset['alt' + suffix]);
+      });
       document.querySelectorAll('[data-language-control]').forEach((button) => {
         button.setAttribute('aria-pressed', String(button.dataset.languageControl === language));
       });

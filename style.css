@@ -49,6 +49,7 @@ a:hover { color: var(--accent); }
 img { max-width: 100%; height: auto; }
 button { color: inherit; }
 [hidden] { display: none !important; }
+[data-language="es"] .en, [data-language="en"] .es { display: none !important; }
 
 :focus-visible {
   outline: 3px solid var(--focus);
