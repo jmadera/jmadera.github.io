@@ -90,7 +90,7 @@ TRAINING = sorted(D.TRAINING, key=lambda e: -e[0])
 def read_courses():
     src = open(P('teaching.html'), encoding='utf-8').read()
     out = []
-    for m in re.finditer(r'<li><span class="es">(.*?)</span><span class="en">(.*?)</span></li>', src, re.S):
+    for m in re.finditer(r'<li><span class="es"(?: lang="es")?>(.*?)</span><span class="en"(?: lang="en")?>(.*?)</span></li>', src, re.S):
         out.append((html.unescape(m.group(1)).strip(), html.unescape(m.group(2)).strip()))
     return out
 COURSES = read_courses()
@@ -316,11 +316,6 @@ def build_index():
     # English-first metadata and CV button
     src = src.replace('Sitio académico de Julio Madera: investigación en inteligencia artificial, aprendizaje automático, optimización y algoritmos de estimación de distribuciones.',
                       'Academic website of Julio Madera: research in artificial intelligence, machine learning, optimization and estimation of distribution algorithms.')
-    src = re.sub(r'<script type="application/ld\+json">.*?</script>\n?', '', src, flags=re.S)
-    ld = ('<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Julio César Madera Quintana","url":"https://jmadera.github.io/",'
-          '"jobTitle":"Full Professor","affiliation":{"@type":"CollegeOrUniversity","name":"University of Camagüey"},'
-          f'"sameAs":["{ORCID}","{SCHOLAR_ES}","https://github.com/jmadera"]}}</script>\n')
-    src = src.replace('</head>', ld + '</head>', 1)
     write('index.html', src)
 
 def patch_other_pages():
@@ -554,4 +549,5 @@ if __name__ == '__main__':
     print('pubs', len(PUBS), 'books', len(BOOKS), 'soft', len(SOFT), 'events', len(EVENTS), 'awards', len(AWARDS))
     missing = [t for y, t in PUBS if not y]
     print('pubs sin año:', missing)
+    import seo; seo.run()
     if '--no-pdf' not in sys.argv: build_pdfs()

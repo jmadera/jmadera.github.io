@@ -1,0 +1,37 @@
+# Julio César Madera Quintana (Julio Madera)
+
+> Cuban computer scientist, Rector and Full Professor at the University of Camagüey (Cuba). Doctor of Mathematical Sciences (ICIMAF, 2010). Research in artificial intelligence, machine learning, optimization and estimation of distribution algorithms (EDAs), including cellular and parallel EDAs, applications to energy systems, imbalanced learning, natural language processing and education.
+
+Key facts:
+- Name variants: Julio Madera, Julio César Madera Quintana, J. Madera, Madera Quintana J.
+- Affiliation: Universidad de Camagüey, Camagüey, Cuba. Positions: Rector (2025–present), First Vice-Rector (2021–2025), Vice-Rector for Informatization (2017–2020), Dean of the Faculty of Informatics (2012–2016).
+- Education: PhD Mathematical Sciences (ICIMAF, 2010); MSc Applied Informatics (University of Camagüey, 2007); BSc Computer Science (Central University of Las Villas, 1997).
+- Awards: Cuban Academy of Sciences Award 2023 (two awards); first place GECCO 2023, 2021 and 2020 energy-domain competitions; Pablo Miquel Award 2021; CITMA Provincial Award 2022.
+- Identifiers: ORCID 0000-0001-5551-690X; Google Scholar user cGe6Tv0AAAAJ; GitHub jmadera.
+- Languages of the site: English (default) and Spanish. Email: julio.madera@reduc.edu.cu
+
+## Main pages
+
+- [Home / profile](https://jmadera.github.io/): overview, selected publications, trajectory
+- [Research](https://jmadera.github.io/research.html): research lines and publications per year by topic
+- [Publications](https://jmadera.github.io/publications.html): full list, newest first, with DOIs and links
+- [Events](https://jmadera.github.io/events.html): conferences, workshops and contests, 1998–2026
+- [Talks](https://jmadera.github.io/talks.html): lectures and talks
+- [Awards](https://jmadera.github.io/awards.html): awards and recognitions
+- [Competitions](https://jmadera.github.io/competitions.html): GECCO/IEEE competitions and IberLEF/Rest-Mex shared tasks
+- [Supervision](https://jmadera.github.io/supervision.html): doctoral and master’s theses supervised
+- [Teaching](https://jmadera.github.io/teaching.html): postgraduate courses taught
+- [Leadership](https://jmadera.github.io/leadership.html): academic and scientific responsibilities
+- [Projects](https://jmadera.github.io/projects.html): research projects and applications
+- [Contact](https://jmadera.github.io/contact.html): email and academic profiles
+
+## Curriculum vitae (PDF)
+
+- [CV in English](https://jmadera.github.io/files/julio_madera_en.pdf)
+- [CV en español](https://jmadera.github.io/files/julio_madera_es.pdf)
+
+## Profiles
+
+- [ORCID](https://orcid.org/0000-0001-5551-690X)
+- [Google Scholar](https://scholar.google.com/citations?user=cGe6Tv0AAAAJ&hl=en)
+- [GitHub](https://github.com/jmadera)
