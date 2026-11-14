@@ -458,3 +458,29 @@ button { color: inherit; }
   .archive-list li { padding-left: 1.55rem; }
   .footer-inner { flex-direction: column; gap: .7rem; }
 }
+
+/* CV-derived lists: year chips, year headings */
+.year-heading { margin: 2rem 0 .4rem; color: var(--accent); font-family: "IBM Plex Mono", monospace; font-size: .95rem; font-weight: 600; letter-spacing: .04em; }
+.archive-section .year-heading:first-of-type { margin-top: 1rem; }
+.archive-list li:has(> .item-year) { display: grid; grid-template-columns: 5.6rem 1fr; gap: .25rem 1rem; }
+.item-year { color: var(--accent); font-family: "IBM Plex Mono", monospace; font-size: .82rem; font-weight: 600; padding-top: .15rem; white-space: nowrap; }
+.item-text { min-width: 0; overflow-wrap: anywhere; }
+.archive-section + .archive-section { margin-top: 3rem; }
+@media (max-width: 640px) { .archive-list li:has(> .item-year) { grid-template-columns: 1fr; } }
+
+/* publication chart */
+:root { --c-eda:#123b6d; --c-energy:#e09f3e; --c-nlp:#2a9d8f; --c-edu:#a14a8c; --c-other:#8a97ab; }
+:root[data-theme="dark"] { --c-eda:#5ba9f7; --c-energy:#ffc266; --c-nlp:#4fd1c1; --c-edu:#d98bc7; --c-other:#9aa7bb; }
+.chart-figure { margin: 1.5rem 0 0; padding: 1.2rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.pub-chart { display: block; width: 100%; height: auto; }
+.pub-chart .grid { stroke: var(--line); stroke-width: 1; }
+.pub-chart .axis { fill: var(--muted); font-size: 11px; font-family: "IBM Plex Mono", monospace; }
+.pub-chart .tot { fill: var(--text); font-size: 10px; font-weight: 600; font-family: "IBM Plex Mono", monospace; }
+.b-eda { fill: var(--c-eda); } .b-energy { fill: var(--c-energy); } .b-nlp { fill: var(--c-nlp); } .b-edu { fill: var(--c-edu); } .b-other { fill: var(--c-other); }
+.chart-legend { display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; margin: 1rem 0 0; padding: 0; list-style: none; color: var(--muted); font-size: .88rem; }
+.chart-legend .sw { display: inline-block; width: .8rem; height: .8rem; margin-right: .45rem; border-radius: .15rem; vertical-align: -.05rem; }
+.sw.b-eda { background: var(--c-eda); } .sw.b-energy { background: var(--c-energy); } .sw.b-nlp { background: var(--c-nlp); } .sw.b-edu { background: var(--c-edu); } .sw.b-other { background: var(--c-other); }
+.chart-table { margin-top: 1rem; } .chart-table summary { cursor: pointer; color: var(--brand); font-weight: 600; }
+.table-wrap { overflow-x: auto; margin-top: .8rem; } .table-wrap table { border-collapse: collapse; width: 100%; font-size: .88rem; }
+.table-wrap th, .table-wrap td { padding: .35rem .6rem; border-bottom: 1px solid var(--line); text-align: right; } .table-wrap th:first-child, .table-wrap thead th { text-align: left; }
+.button-row.cross { margin: 0 0 1.5rem; }

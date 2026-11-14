@@ -25,7 +25,7 @@
       document.querySelectorAll('[data-language-control]').forEach((button) => {
         button.setAttribute('aria-pressed', String(button.dataset.languageControl === language));
       });
-      try { localStorage.setItem('language', language); } catch (error) {}
+      try { sessionStorage.setItem('language', language); } catch (error) {}
       const toggle = document.querySelector('[data-theme-toggle]');
       if (toggle) {
         toggle.setAttribute('aria-label', language === 'es' ? 'Cambiar modo de color' : 'Change color mode');
@@ -37,9 +37,10 @@
     };
 
     const savedLanguage = (() => {
-      try { return localStorage.getItem('language'); } catch (error) { return null; }
+      try { return sessionStorage.getItem('language'); } catch (error) { return null; }
     })();
-    setLanguage(savedLanguage === 'en' ? 'en' : 'es');
+    // English is always the default; a choice made with the ES/EN buttons lasts only for the current browser tab.
+    setLanguage(savedLanguage === 'es' ? 'es' : 'en');
 
     document.querySelectorAll('[data-language-control]').forEach((button) => {
       button.addEventListener('click', () => setLanguage(button.dataset.languageControl));
@@ -84,10 +85,8 @@
     const status = document.querySelector('[data-publication-status]');
     if (list && searchInput && filters && status) {
       const items = Array.from(list.querySelectorAll('li'));
-      const years = Array.from(new Set(items.map((item) => {
-        const match = item.textContent.match(/\b(19|20)\d{2}\b/);
-        return match ? match[0] : null;
-      }).filter(Boolean))).sort((a, b) => Number(b) - Number(a));
+      const years = Array.from(new Set(items.map((item) => item.dataset.year).filter(Boolean)))
+        .sort((a, b) => Number(b) - Number(a));
       let activeYear = 'all';
 
       const renderButtons = () => {
@@ -112,7 +111,7 @@
         const term = searchInput.value.trim().toLocaleLowerCase();
         let visible = 0;
         items.forEach((item) => {
-          const matchesYear = activeYear === 'all' || item.textContent.includes(activeYear);
+          const matchesYear = activeYear === 'all' || item.dataset.year === activeYear;
           const matchesTerm = !term || item.textContent.toLocaleLowerCase().includes(term);
           const show = matchesYear && matchesTerm;
           item.hidden = !show;
