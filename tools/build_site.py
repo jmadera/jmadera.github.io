@@ -68,13 +68,18 @@ def sort_desc(items):
 
 def esc(t): return html.escape(t, quote=False)
 def linkify(t):
+    """Escapa el texto y enlaza URLs y DOIs en una sola pasada (sin anidar enlaces)."""
     t = esc(t)
-    t = re.sub(r'(doi:\s*)(10\.\d{4,9}/[^\s<]+?)(\.?)(?=\s|$)', lambda m: f'{m.group(1)}<a href="https://doi.org/{m.group(2)}" target="_blank" rel="noopener">{m.group(2)}</a>{m.group(3)}', t, flags=re.I)
+    rx = re.compile(r'(?P<doi>\b[Dd][Oo][Ii]:\s*)(?P<d>10\.\d{4,9}/[^\s<]+)|(?P<u>https?://[^\s<]+)')
     def rep(m):
-        url = m.group(0); tail = ''
+        if m.group('d'):
+            d = m.group('d'); tail = ''
+            while d and d[-1] in '.,;)': tail = d[-1] + tail; d = d[:-1]
+            return f'{m.group("doi")}<a href="https://doi.org/{d}" target="_blank" rel="noopener">{d}</a>{tail}'
+        url = m.group('u'); tail = ''
         while url and url[-1] in '.,;)': tail = url[-1] + tail; url = url[:-1]
         return f'<a href="{url}" target="_blank" rel="noopener">{url}</a>{tail}'
-    return re.sub(r'https?://[^\s<]+', rep, t)
+    return rx.sub(rep, t)
 
 PUBS = sort_desc([(year_of(t), t) for t in PUBS_RAW])
 BOOKS = sort_desc([(year_of(t), t) for t in BOOKS_RAW])
