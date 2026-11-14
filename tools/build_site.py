@@ -103,9 +103,9 @@ assert len(COURSES) == 39, len(COURSES)
 
 # ------------------------------------------------------------------ page shell
 NAV = [('index.html', 'Inicio', 'Home'), ('research.html', 'Investigación', 'Research'),
-       ('publications.html', 'Publicaciones', 'Publications'), ('events.html', 'Eventos', 'Events'),
+       ('publications.html', 'Publicaciones', 'Publications'), ('events.html', 'Eventos', 'Events'), ('talks.html', 'Charlas', 'Talks'),
        ('projects.html', 'Proyectos', 'Projects'), ('teaching.html', 'Docencia', 'Teaching'),
-       ('supervision.html', 'Tutorías', 'Supervision'), ('leadership.html', 'Liderazgo', 'Leadership'),
+       ('supervision.html', 'Tutorías', 'Supervision'),
        ('awards.html', 'Premios', 'Awards'), ('cv.html', None, 'CV'), ('contact.html', 'Contacto', 'Contact')]
 def nav_html():
     rows = []
@@ -442,6 +442,10 @@ def chart_html():
 def patch_research():
     src = open(P('research.html'), encoding='utf-8').read()
     src = re.sub(r'<!--chart-->.*?<!--/chart-->\s*', '', src, flags=re.S)
+    btn = ('<a class="button secondary" href="leadership.html"><span class="es" lang="es">Liderazgo académico</span>'
+           '<span class="en" lang="en">Academic leadership</span></a>')
+    if 'href="leadership.html"' not in src:
+        src = src.replace('<span class="en" lang="en">View applications</span></a></div>', '<span class="en" lang="en">View applications</span></a>' + btn + '</div>', 1)
     marker = '<section class="section" aria-labelledby="research-evidence">'
     assert marker in src
     src = src.replace(marker, chart_html() + marker, 1)
